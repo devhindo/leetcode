@@ -9,7 +9,7 @@
 #include <stdio.h>
 struct ListNode* deleteDuplicates(struct ListNode* head){
     struct ListNode *q,*r,*s;
-    if(!head) {
+    if(!head || !head->next) {
         return head;
     }
     q=head;
