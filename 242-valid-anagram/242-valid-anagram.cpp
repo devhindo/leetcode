@@ -1,6 +1,9 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
+        if(s.length() != t.length()) {
+            return false;
+        }
         bool f = true;
         map<char,int>m;
         for(char c : s) {
