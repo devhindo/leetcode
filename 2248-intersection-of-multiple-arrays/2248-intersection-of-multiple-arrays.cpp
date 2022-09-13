@@ -8,9 +8,9 @@ public:
                 m[nums[i][j]]++;
             }
         }
-        for(auto itr = m.begin(); itr != m.end(); itr++) {
-            if(itr->second == nums.size()) {
-                v.push_back(itr->first);
+        for(auto e : m) {
+            if(e.second == nums.size()) {
+                v.push_back(e.first);
             }
         }
         sort(v.begin(), v.end());
