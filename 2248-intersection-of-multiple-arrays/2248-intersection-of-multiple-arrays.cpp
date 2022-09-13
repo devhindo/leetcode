@@ -13,7 +13,6 @@ public:
                 v.push_back(itr->first);
             }
         }
-        sort(v.begin(), v.end());
         return v;
     }
 };
