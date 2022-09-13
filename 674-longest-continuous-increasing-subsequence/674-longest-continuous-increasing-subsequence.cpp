@@ -10,9 +10,7 @@ public:
             end++;
         }
         else {
-            if (longest < (end - start)) {
-                longest = end - start;
-            }
+            longest = max(longest, end-start);
             start = end;
             end++;
         }
