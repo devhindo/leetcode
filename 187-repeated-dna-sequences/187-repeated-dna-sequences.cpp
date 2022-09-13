@@ -7,11 +7,9 @@ public:
         for(auto i=0; i<s.size()-9; i++) {
             string q = s.substr(i,10);
             dnas[q]++;
-        }
-        for(auto dna : dnas) {
-            if(dna.second > 1) r.push_back(dna.first);
+            if(dnas[q] == 2) r.push_back(q);
+            
         }
         return r;
-        
     }
 };
