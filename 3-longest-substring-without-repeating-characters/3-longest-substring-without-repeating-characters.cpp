@@ -6,7 +6,9 @@ public:
         while(end < s.size()) {
             if(d.find(s[end]) == d.end()) {
                 d.insert(s[end]);
-                longest = d.size()>longest ? d.size() : longest;
+                if(d.size() > longest) {
+                    longest = d.size();
+                }
                 end++;
             } else {
                 d.erase(s[start]);
