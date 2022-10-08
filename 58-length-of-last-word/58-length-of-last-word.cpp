@@ -6,12 +6,8 @@ public:
         while(s[i] == ' ') {
             i--;
         }
-        while(i >= 0) {
-            if(s[i] != ' ') {
-                l++;
-            } else {
-                break;
-            }
+        while(i >= 0 && s[i] != ' ') {
+            l++;
             i--;
         }
         return l;
