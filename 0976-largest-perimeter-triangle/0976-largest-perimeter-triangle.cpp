@@ -9,7 +9,8 @@ public:
         int i = nums.size()-1;
         while(i-2 >= 0) {
             if(isTriangle(nums[i],nums[i-1],nums[i-2])) {
-                largest = (nums[i]+nums[i-1]+nums[i-2]) > largest ? nums[i]+nums[i-1]+nums[i-2] : largest;
+                if(nums[i]+nums[i-1]>nums[i-2])
+                    return nums[i]+nums[i-1]+nums[i-2];
             } 
             i--;
         }
