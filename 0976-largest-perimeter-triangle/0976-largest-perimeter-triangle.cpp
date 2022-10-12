@@ -5,7 +5,7 @@ public:
     }
     int largestPerimeter(vector<int>& nums) {
         int largest = 0;
-        sort(nums.begin(),nums.end());
+        sort(begin(nums),end(nums));
         int i = nums.size()-1;
         int j = i-1;
         int k = j-1;
