@@ -7,15 +7,11 @@ public:
         int largest = 0;
         sort(begin(nums),end(nums));
         int i = nums.size()-1;
-        int j = i-1;
-        int k = j-1;
-        while(i >= 0 && j >= 0 && k >= 0) {
-            if(isTriangle(nums[i],nums[j],nums[k])) {
-                largest = (nums[i]+nums[j]+nums[k]) > largest ? nums[i]+nums[j]+nums[k] : largest;
+        while(i-2 >= 0) {
+            if(isTriangle(nums[i],nums[i-1],nums[i-2])) {
+                largest = (nums[i]+nums[i-1]+nums[i-2]) > largest ? nums[i]+nums[i-1]+nums[i-2] : largest;
             } 
             i--;
-            j--;
-            k--;
         }
         return largest;
     }
