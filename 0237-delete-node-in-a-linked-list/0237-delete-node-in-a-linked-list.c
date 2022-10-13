@@ -6,5 +6,7 @@
  * };
  */
 void deleteNode(struct ListNode* node) {
-    *node = *node->next;
+    struct ListNode* q = node->next;
+    *node = *q;
+    free(q);
 }
