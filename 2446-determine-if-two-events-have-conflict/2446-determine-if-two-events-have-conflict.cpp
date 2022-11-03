@@ -8,6 +8,6 @@ public:
     bool haveConflict(vector<string>& event1, vector<string>& event2) {
         pair<int,int>e1 = { tosec(event1[0]),tosec(event1[1]) };  
         pair<int,int>e2 = { tosec(event2[0]),tosec(event2[1]) };
-        return ((e2.first <= e1.second) && (e1.second <= e2.second)) || ((e2.first <= e1.first) && (e1.first <= e2.second)) || ((e1.first <= e2.first) && (e2.first <= e1.second)) || ((e1.first <= e2.second) && (e2.second <= e1.second));
+        return ((e2.first <= e1.second) && (e1.second <= e2.second)) || ((e2.first <= e1.first) &&               (e1.first <= e2.second)) || ((e1.first <= e2.first) && (e2.first <= e1.second)) || ((e1.first <=         e2.second) && (e2.second <= e1.second));
     }
 };
