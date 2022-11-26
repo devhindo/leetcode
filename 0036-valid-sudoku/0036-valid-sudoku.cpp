@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool sqr(vector<vector<char>>& board, int rowStart, int colStart, unordered_map<int,set<int>>&c, unordered_map<int,set<int>>&r) {
+    bool sqr(vector<vector<char>>& board, int rowStart, int colStart, map<int,set<int>>&c, map<int,set<int>>&r) {
         set<int>s;
         for(int i=rowStart; i<3+rowStart; i++) {
             for(int j=colStart; j < colStart+3; j++) {
@@ -26,8 +26,8 @@ public:
         return true;
     }
     bool isValidSudoku(vector<vector<char>>& board) {
-        unordered_map<int,set<int>>c;
-        unordered_map<int,set<int>>r;
+        map<int,set<int>>c;
+        map<int,set<int>>r;
         for(int i=0; i<9; i=i+3) {
             for(int j=0; j<9; j=j+3) {
                 if(!sqr(board,i,j,c,r)) return false;
