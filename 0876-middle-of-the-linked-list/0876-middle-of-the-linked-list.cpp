@@ -11,15 +11,12 @@
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        map<int,ListNode*>m;
-        int i = 0;
-        ListNode* q = head;
-        while(q) {
-            m[i] = q;
-            q = q->next;
-            i++;
+        ListNode* s = head;
+        ListNode* f = head;
+        while(f && f->next) {
+            s = s->next;
+            f = f->next->next;
         }
-        int mid = m.rbegin()->first;
-        return m[mid % 2 == 0 ? mid/2 : mid/2+1];
+        return s;
     }
 };
