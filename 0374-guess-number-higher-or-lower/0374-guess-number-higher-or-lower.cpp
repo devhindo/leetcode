@@ -10,8 +10,7 @@
 class Solution {
 public:
     int guessNumber(int n) {
-        double s=0,g;
-        double m;
+        double s=0,g,m;
         while(1) {
             m = (s+n)/2;
             g = guess(m);
