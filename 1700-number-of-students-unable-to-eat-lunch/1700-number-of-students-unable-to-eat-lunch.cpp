@@ -22,6 +22,5 @@ public:
             }
         }
         return q.size();
-        
     }
 };
