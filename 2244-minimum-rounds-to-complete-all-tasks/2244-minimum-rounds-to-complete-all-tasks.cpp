@@ -8,10 +8,7 @@ public:
             if(t.second==1) return -1;
             else if(t.second==2) c++;
             else if(t.second%3==0) c += t.second/3;
-            else {
-                c += (t.second-4)/3;
-                c += 2;
-            } 
+            else c += (t.second-4)/3 + 2;   
         }
         return c;
     }
