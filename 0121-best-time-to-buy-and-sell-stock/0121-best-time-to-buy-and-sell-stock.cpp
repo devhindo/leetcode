@@ -3,7 +3,6 @@ public:
     int maxProfit(vector<int>& prices) {
         int profit = 0;
         int l=0,r=1;
-        if(prices.size()==1) return profit;
         while(r<prices.size()) {
             if(prices[r]>prices[l]) {
                 profit=prices[r]-prices[l]>profit?prices[r]-prices[l]:profit;
