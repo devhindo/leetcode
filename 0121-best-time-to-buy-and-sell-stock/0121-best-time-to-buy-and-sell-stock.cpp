@@ -5,7 +5,7 @@ public:
         int l=0,r=1;
         while(r<prices.size()) {
             if(prices[r]>prices[l]) {
-                profit=prices[r]-prices[l]>profit?prices[r]-prices[l]:profit;
+                profit=max(prices[r]-prices[l],profit);
             } else {
                 l=r;
             }
