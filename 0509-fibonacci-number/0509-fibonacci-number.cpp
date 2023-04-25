@@ -1,14 +1,13 @@
 class Solution {
 public:
-    unordered_map<int,int>m;
     int fib(int n) {
-        if(n == 0) return 0;
-        if(m[n]) return m[n];
-        if(n == 1) {
-            m[n] = 1;
-            return 1;
+        if(n==0) return 0;
+        vector<int>v(n+1);
+        v[0] = 0;
+        v[1] = 1;
+        for(int i=2; i<=n; i++) {
+            v[i] = v[i-1] + v[i-2];
         }
-        m[n] = fib(n-1) + fib(n-2);
-        return m[n];
+        return v[n];
     }
 };
