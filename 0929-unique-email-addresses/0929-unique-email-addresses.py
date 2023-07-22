@@ -1,3 +1,5 @@
+# probably my dirtiest code ever
+
 class Solution:
     def numUniqueEmails(self, emails: List[str]) -> int:
         dic = {}
