@@ -13,12 +13,6 @@ class Solution:
         backtrack([],0)
         return sol
         
-        
-        
-        
-        
-        
-        
         # bit manipulation solution
         """
         bit = pow(2,len(nums))-1
