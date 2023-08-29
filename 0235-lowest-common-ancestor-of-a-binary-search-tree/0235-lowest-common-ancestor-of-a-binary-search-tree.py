@@ -8,49 +8,24 @@
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         
-        pf = False
-        qf = False
+        h = max(p.val,q.val)
+        l = min(p.val,q.val)
         
-        pl = []
-        ql = []
-        
-        def search(n,l):
-            nonlocal pf
-            nonlocal qf
-            if pf and qf:
-                return
+        def search(n):
+            nonlocal l,h
+            if not n:
+                return None
+            if n.val > l and n.val < h:
+                return n
             
-            l.append(n)
+            if n.val == p.val:
+                return n
             
-            if n == p:
-                nonlocal pl
-                pl = l.copy()
-                pf = True
-                
-            if n == q:
-                nonlocal ql
-                ql = l.copy()
-                qf = True
+            if n.val == q.val:
+                return n
             
-            if n.left:
-                search(n.left,l)
-                
-            if n.right:
-                search(n.right,l)
-                
-            l.pop()
-        
-        search(root, [])
-        
-        limit = min(len(pl),len(ql))
-        
-        j = 0
-        
-        while j<limit:
+            return search(n.left) or search(n.right)
             
-            if pl[j] != ql[j]:
-                return pl[j-1]
-            j += 1
-        
-        return pl[limit-1]
             
+            
+        return search(root)
