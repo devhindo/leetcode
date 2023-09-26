@@ -29,8 +29,6 @@ class Solution:
 
                 x = len(intervals)
                 
-                
-            
             else:
                 if f:
                     break
