@@ -14,11 +14,10 @@ class Solution:
         
         s = []
         
+        if not len(digits): return s
+        
         def c(v,i):
            
-            if not len(digits) or i == len(digits)+1:
-                return
-            
             if len(v) == len(digits):
                 s.append(v)
                 return
