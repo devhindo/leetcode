@@ -13,22 +13,21 @@ class Solution:
                 matrix[i][j] = v
                 return
             
-            x(j, len(matrix)-i-1, k-1,matrix[i][j])
+            x(j, len(matrix)-i-1, k-1, matrix[i][j])
             matrix[i][j] = v
+                    
+        l, r, i = 0, len(matrix)-1, 0
+        
+        while l < r:
+            for j in range(l,r):
+                x(j, len(matrix)-i-1, 3, matrix[i][j])
             
-        i, j, r, b, d = 0, 0, len(matrix)//2, len(matrix)-1, 0
-        
-        
-        while r:
-            while j < b:
-                x(j,len(matrix)-1-i,3,matrix[i][j])
-                j += 1
-                
-            r -= 1
             i += 1
-            b -= 1
-            d += 1
-            j = d
             
+            r -= 1
+            l += 1
+            
+            
+
 
             
