@@ -4,7 +4,7 @@ class Solution:
         d = {}
         
         for i in range(len(strs)):
-            st = tuple(sorted(strs[i]))
+            st = str(sorted(strs[i]))
                     
             if st not in d:
                d[st] = []
