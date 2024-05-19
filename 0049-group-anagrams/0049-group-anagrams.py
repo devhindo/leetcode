@@ -1,20 +1,22 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         
-        d = {}
+        x = defaultdict(list)
         
-        for i in range(len(strs)):
-            st = str(sorted(strs[i]))
-                    
-            if st not in d:
-               d[st] = []
+        for s in strs:
             
-            d[st].append(strs[i])
+            d = [0] * 26
+
+            for c in s:
+                d[ord(c)-ord("a")] += 1
+            
+            
+                
+            x[tuple(d)].append(s)
             
         a = []
-        
-        for e in d:
-            a.append(d[e])
+            
+        for e in x:
+            a.append(x[e])
             
         return a
-        
