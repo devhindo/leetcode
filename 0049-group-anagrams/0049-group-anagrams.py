@@ -14,9 +14,5 @@ class Solution:
                 
             x[tuple(d)].append(s)
             
-        a = []
             
-        for e in x:
-            a.append(x[e])
-            
-        return a
+        return x.values()
