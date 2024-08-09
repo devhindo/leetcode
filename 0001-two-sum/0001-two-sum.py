@@ -7,6 +7,8 @@ class Solution:
             if target-nums[i] in d:
                 return [i, d[target-nums[i]]]
             d[nums[i]] = i
+
+            
         
 
         
